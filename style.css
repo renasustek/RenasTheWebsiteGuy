@@ -1018,7 +1018,72 @@ body {
   padding: 32px;
 }
 
-.contact-whatsapp { border-color: #25D366; box-shadow: 6px 6px 0 #25D366; }
+.contact-direct-reach {
+  border-color: #25D366;
+  box-shadow: 6px 6px 0 #25D366;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-subcard {
+  padding: 4px 0;
+}
+
+.contact-subcard .contact-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-subcard h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.contact-subcard p {
+  color: #999;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.contact-split-divider {
+  height: 1px;
+  background: #333;
+  border-top: 2px dashed #555;
+  margin: 16px 0;
+}
+
+.btn-whatsapp-direct {
+  background: #25D366;
+  color: var(--black);
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  display: block;
+}
+
+.btn-whatsapp-direct:hover {
+  background: #20bd5a;
+}
+
+.btn-call-direct {
+  background: var(--blue-light);
+  color: var(--black);
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  display: block;
+}
+
+.btn-call-direct:hover {
+  background: var(--blue);
+}
+
 .contact-callback { border-color: var(--yellow); box-shadow: 6px 6px 0 var(--yellow); }
 .contact-email { border-color: var(--pink); box-shadow: 6px 6px 0 var(--pink); }
 
