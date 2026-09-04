@@ -125,6 +125,26 @@ body {
   background: var(--yellow-dark);
 }
 
+/* ----- Hero button pastel overrides ----- */
+.hero .btn-primary {
+  background: #ffb3c1; /* pastel pink */
+  color: var(--white);
+}
+
+.hero .btn-primary:hover {
+  background: #ff8aa0; /* darker pastel pink */
+}
+
+.hero .btn-outline {
+  background: #cce7ff; /* pastel blue */
+  color: var(--black);
+}
+
+.hero .btn-outline:hover {
+  background: #b3d4ff; /* slightly darker pastel blue */
+}
+
+
 /* ===== SECTION HEADERS ===== */
 .section-header {
   text-align: center;
@@ -208,20 +228,43 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
   list-style: none;
 }
 
-.nav-links a {
+.nav-links a:not(.btn) {
   text-decoration: none;
   color: var(--black);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
-  transition: color 0.2s;
+  background: var(--white);
+  padding: 8px 16px;
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  box-shadow: 3px 3px 0px var(--black);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  display: inline-block;
 }
 
-.nav-links a:hover {
-  color: var(--pink);
+.nav-links a:not(.btn):hover {
+  background: var(--yellow);
+}
+
+.nav-links li:nth-child(1) a:not(.btn) {
+  background: var(--blue-light);
+}
+
+.nav-links li:nth-child(2) a:not(.btn) {
+  background: var(--purple-light);
+}
+
+.nav-links li:nth-child(3) a:not(.btn) {
+  background: var(--orange-light);
+}
+
+.nav-links a:not(.btn):active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--black);
 }
 
 .hamburger {
@@ -717,7 +760,7 @@ body {
 
 /* ===== PRICING ===== */
 .pricing {
-  padding: 100px 0;
+  padding: 100px 0 30px;
 }
 
 .badge-free {
@@ -911,6 +954,101 @@ body {
 
 .retainer-content strong {
   color: var(--white);
+}
+
+/* ===== BESPOKE SOFTWARE SECTION ===== */
+.software-section {
+  padding: 10px 0 30px;
+}
+
+.software-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: var(--purple-light);
+  border: var(--border);
+  border-radius: 24px;
+  padding: 32px 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.tag-purple {
+  background: var(--black);
+  color: var(--yellow);
+}
+
+.software-content {
+  flex: 1;
+}
+
+.software-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  margin: 16px 0 12px;
+  color: var(--black);
+}
+
+.software-desc {
+  font-size: 1.05rem;
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.software-features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.software-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.software-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.software-graphic {
+  flex-shrink: 0;
+}
+
+.software-box {
+  background: var(--black);
+  color: var(--white);
+  border: var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  box-shadow: 6px 6px 0 var(--yellow);
+}
+
+.software-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.software-badge-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--yellow);
+  margin-bottom: 4px;
+}
+
+.software-badge-sub {
+  font-size: 0.85rem;
+  color: #ccc;
 }
 
 /* ===== FAQ ===== */
@@ -1423,6 +1561,21 @@ body {
   .retainer-box {
     flex-direction: column;
     text-align: center;
+  }
+
+  .software-card {
+    flex-direction: column;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .software-features {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .software-cta {
+    justify-content: center;
   }
 
   .footer-inner {
