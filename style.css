@@ -85,9 +85,14 @@ body {
   border: var(--border);
   border-radius: var(--radius);
   cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: var(--shadow);
   white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px var(--black);
 }
 
 .btn:active {
@@ -242,8 +247,13 @@ body {
   border: 2px solid var(--black);
   border-radius: 8px;
   box-shadow: 3px 3px 0px var(--black);
-  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   display: inline-block;
+}
+
+.nav-links a:not(.btn):hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black);
 }
 
 .nav-links a:not(.btn):hover {
@@ -1223,7 +1233,7 @@ body {
 }
 
 .contact-callback { border-color: var(--yellow); box-shadow: 6px 6px 0 var(--yellow); }
-.contact-email { border-color: var(--pink); box-shadow: 6px 6px 0 var(--pink); }
+.contact-trust { border-color: var(--pink); box-shadow: 6px 6px 0 var(--pink); }
 
 .contact-icon {
   font-size: 2.5rem;
@@ -1243,15 +1253,45 @@ body {
   color: #999;
   font-size: 0.95rem;
   line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Trust list */
+.trust-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 24px;
 }
 
-.contact-detail {
-  margin-top: 16px;
-  font-size: 0.9rem;
+.trust-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-weight: 600;
-  color: #ccc;
+  font-size: 0.95rem;
+  color: var(--white);
 }
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 2px solid var(--black);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.badge-yellow { background: var(--yellow); }
+.badge-pink   { background: var(--pink-light); }
+.badge-blue   { background: var(--blue-light); }
+.badge-green  { background: var(--green-light); }
+.badge-purple { background: var(--purple-light); }
+.badge-orange { background: var(--orange-light); }
 
 /* ===== FORMS ===== */
 .form-group {
