@@ -988,14 +988,17 @@ body {
 }
 
 .software-card {
-  display: flex;
-  align-items: center;
-  gap: 40px;
   background: var(--purple-light);
   border: var(--border);
   border-radius: 24px;
   padding: 32px 40px;
   box-shadow: var(--shadow-lg);
+}
+
+.software-card-body {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .tag-purple {
@@ -1158,7 +1161,66 @@ body {
   line-height: 1.7;
 }
 
-/* ===== CONTACT ===== */
+/* ===== ABOUT ME ===== */
+.about-me {
+  padding: 100px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image-wrapper {
+  background: var(--yellow);
+  border: var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-content {
+  padding: 48px;
+  background: var(--blue-light);
+  border: var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  margin: 16px 0 24px;
+}
+
+.about-desc {
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-desc:last-child {
+  margin-bottom: 0;
+}
 .contact {
   padding: 100px 0;
   background: var(--black);
@@ -1568,7 +1630,7 @@ body {
 }
 
 .pricing-card-body {
-  display: block; /* always visible on desktop */
+  /* visible on desktop by default */
 }
 
 /* ===== MOBILE CONTACT FAB ===== */
@@ -1663,8 +1725,12 @@ body {
   }
 
   .software-card {
+    padding: 16px 20px;
+  }
+
+  .software-card-body {
     flex-direction: column;
-    padding: 32px 24px;
+    padding-top: 16px;
     text-align: center;
   }
 
@@ -1770,6 +1836,16 @@ body {
     display: block;
   }
 
+  .pricing-card-body.software-card-body.open {
+    display: flex;
+  }
+
+  /* Hide redundant header info inside the expanded body on mobile */
+  .pricing-card-body .tier-label,
+  .pricing-card-body .plan-name {
+    display: none;
+  }
+
   /* === Mobile floating Contact FAB === */
   .mobile-contact-fab {
     display: flex;
@@ -1800,6 +1876,25 @@ body {
   .mobile-contact-fab:active {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 var(--black);
+  }
+
+  /* About Me Mobile */
+  .about-me {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .about-image-wrapper {
+    min-height: 250px;
+  }
+
+  .about-content {
+    padding: 32px 24px;
   }
 }
 
