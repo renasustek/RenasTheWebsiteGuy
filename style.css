@@ -1644,9 +1644,10 @@ body {
     display: flex;
   }
 
-  /* Hide logo text on mobile — show only the image */
-  .nav-logo-text {
-    display: none;
+  /* Make logo text smaller on mobile instead of hiding */
+  .nav-logo {
+    font-size: 1.1rem;
+    gap: 8px;
   }
 
   .nav-logo-img {
