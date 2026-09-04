@@ -26,8 +26,10 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <span class="logo-bracket">{</span> Renas The Website Guy <span class="logo-accent">.</span> <span
-          class="logo-bracket">}</span>
+        <img src="images/logo.png" alt="Renas The Website Guy Logo" class="nav-logo-img" />
+        <span class="nav-logo-text">
+          <span class="logo-bracket">{</span> Renas The Website Guy <span class="logo-accent">.</span> <span class="logo-bracket">}</span>
+        </span>
       </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -254,82 +256,106 @@
             your first 3 months!</span></p>
       </div>
 
-      <div class="pricing-grid">
+      <div class="pricing-grid" id="pricing-grid">
 
         <!-- TIER 1 -->
         <div class="pricing-card card-yellow" id="pricing-digital-presence">
-          <div class="pricing-header">
-            <div class="tier-label">Tier 1</div>
-            <h3 class="plan-name">The Digital Presence</h3>
-            <div class="price-block">
-              <div class="price-launch">£559 <span class="launch-tag">Launch Price</span></div>
-              <div class="price-standard">Standard: <s>£1,199</s></div>
-              <div class="price-monthly">+ £30<span>/mo</span> <span class="retainer-free">(Free 3 months!)</span></div>
+          <button class="pricing-accordion-btn" aria-expanded="false" aria-controls="tier1-body">
+            <span class="accordion-tier-label">Tier 1</span>
+            <span class="accordion-plan-name">The Digital Presence</span>
+            <span class="accordion-price">£559</span>
+            <span class="accordion-chevron">▼</span>
+          </button>
+          <div class="pricing-card-body" id="tier1-body">
+            <div class="pricing-header">
+              <div class="tier-label">Tier 1</div>
+              <h3 class="plan-name">The Digital Presence</h3>
+              <div class="price-block">
+                <div class="price-launch">£559 <span class="launch-tag">Launch Price</span></div>
+                <div class="price-standard">Standard: <s>£1,199</s></div>
+                <div class="price-monthly">+ £30<span>/mo</span> <span class="retainer-free">(Free 3 months!)</span></div>
+              </div>
             </div>
+            <ul class="features-list">
+              <li><span class="check">✓</span> Up to 3 pages</li>
+              <li><span class="check">✓</span> Fully mobile-responsive</li>
+              <li><span class="check">✓</span> Click-to-Call buttons</li>
+              <li><span class="check">✓</span> 1 Contact Form</li>
+              <li><span class="check">✓</span> 1 round of revisions</li>
+              <li><span class="check">✓</span> UK Cloud Hosting + SSL</li>
+            </ul>
+            <a href="https://wa.me/447913055346?text=Hi%20Renas%2C%20I%27m%20interested%20in%20the%20Digital%20Presence%20package!"
+              target="_blank" class="btn btn-primary" id="pricing-tier1-btn">
+              Get Started →
+            </a>
           </div>
-          <ul class="features-list">
-            <li><span class="check">✓</span> Up to 3 pages</li>
-            <li><span class="check">✓</span> Fully mobile-responsive</li>
-            <li><span class="check">✓</span> Click-to-Call buttons</li>
-            <li><span class="check">✓</span> 1 Contact Form</li>
-            <li><span class="check">✓</span> 1 round of revisions</li>
-            <li><span class="check">✓</span> UK Cloud Hosting + SSL</li>
-          </ul>
-          <a href="https://wa.me/447913055346?text=Hi%20Renas%2C%20I%27m%20interested%20in%20the%20Digital%20Presence%20package!"
-            target="_blank" class="btn btn-primary" id="pricing-tier1-btn">
-            Get Started →
-          </a>
         </div>
 
         <!-- TIER 2 -->
         <div class="pricing-card card-pink featured" id="pricing-lead-generator">
           <div class="popular-badge">⭐ Most Popular</div>
-          <div class="pricing-header">
-            <div class="tier-label">Tier 2</div>
-            <h3 class="plan-name">The Lead Generator</h3>
-            <div class="price-block">
-              <div class="price-launch">£759 <span class="launch-tag">Launch Price</span></div>
-              <div class="price-standard">Standard: <s>£1,799</s></div>
-              <div class="price-monthly">+ £30<span>/mo</span> <span class="retainer-free">(Free 3 months!)</span></div>
+          <button class="pricing-accordion-btn" aria-expanded="false" aria-controls="tier2-body">
+            <span class="accordion-tier-label">Tier 2</span>
+            <span class="accordion-plan-name">The Lead Generator</span>
+            <span class="accordion-price">£759</span>
+            <span class="accordion-chevron">▼</span>
+          </button>
+          <div class="pricing-card-body" id="tier2-body">
+            <div class="pricing-header">
+              <div class="tier-label">Tier 2</div>
+              <h3 class="plan-name">The Lead Generator</h3>
+              <div class="price-block">
+                <div class="price-launch">£759 <span class="launch-tag">Launch Price</span></div>
+                <div class="price-standard">Standard: <s>£1,799</s></div>
+                <div class="price-monthly">+ £30<span>/mo</span> <span class="retainer-free">(Free 3 months!)</span></div>
+              </div>
             </div>
+            <ul class="features-list">
+              <li><span class="check">✓</span> Up to 5 pages</li>
+              <li><span class="check">✓</span> Live Google Reviews Widget</li>
+              <li><span class="check">✓</span> Advanced Forms</li>
+              <li><span class="check">✓</span> Basic On-Page SEO</li>
+              <li><span class="check">✓</span> 2 rounds of revisions</li>
+              <li><span class="check">✓</span> UK Cloud Hosting + SSL</li>
+            </ul>
+            <a href="https://wa.me/447913055346?text=Hi%20Renas%2C%20I%27m%20interested%20in%20the%20Lead%20Generator%20package!"
+              target="_blank" class="btn btn-primary" id="pricing-tier2-btn">
+              Get Started →
+            </a>
           </div>
-          <ul class="features-list">
-            <li><span class="check">✓</span> Up to 5 pages</li>
-            <li><span class="check">✓</span> Live Google Reviews Widget</li>
-            <li><span class="check">✓</span> Advanced Forms</li>
-            <li><span class="check">✓</span> Basic On-Page SEO</li>
-            <li><span class="check">✓</span> 2 rounds of revisions</li>
-            <li><span class="check">✓</span> UK Cloud Hosting + SSL</li>
-          </ul>
-          <a href="https://wa.me/447913055346?text=Hi%20Renas%2C%20I%27m%20interested%20in%20the%20Lead%20Generator%20package!"
-            target="_blank" class="btn btn-primary" id="pricing-tier2-btn">
-            Get Started →
-          </a>
         </div>
 
         <!-- TIER 3 -->
         <div class="pricing-card card-blue" id="pricing-local-dominator">
-          <div class="pricing-header">
-            <div class="tier-label">Tier 3</div>
-            <h3 class="plan-name">The Local Dominator</h3>
-            <div class="price-block">
-              <div class="price-launch">£959 <span class="launch-tag">Launch Price</span></div>
-              <div class="price-standard">Standard: <s>£2,499</s></div>
-              <div class="price-monthly">+ £30<span>/mo</span> <span class="retainer-free">(Free 3 months!)</span></div>
+          <button class="pricing-accordion-btn" aria-expanded="false" aria-controls="tier3-body">
+            <span class="accordion-tier-label">Tier 3</span>
+            <span class="accordion-plan-name">The Local Dominator</span>
+            <span class="accordion-price">£959</span>
+            <span class="accordion-chevron">▼</span>
+          </button>
+          <div class="pricing-card-body" id="tier3-body">
+            <div class="pricing-header">
+              <div class="tier-label">Tier 3</div>
+              <h3 class="plan-name">The Local Dominator</h3>
+              <div class="price-block">
+                <div class="price-launch">£959 <span class="launch-tag">Launch Price</span></div>
+                <div class="price-standard">Standard: <s>£2,499</s></div>
+                <div class="price-monthly">+ £30<span>/mo</span> <span class="retainer-free">(Free 3 months!)</span></div>
+              </div>
             </div>
+            <ul class="features-list">
+              <li><span class="check">✓</span> Up to 10 pages</li>
+              <li><span class="check">✓</span> Local SEO &amp; Schema Markup</li>
+              <li><span class="check">✓</span> Full Copywriting Included</li>
+              <li><span class="check">✓</span> Priority Support</li>
+              <li><span class="check">✓</span> 3 rounds of revisions</li>
+              <li><span class="check">✓</span> UK Cloud Hosting + SSL</li>
+            </ul>
+            <a href="https://wa.me/447913055346?text=Hi%20Renas%2C%20I%27m%20interested%20in%20the%20Local%20Dominator%20package!"
+              target="_blank" class="btn btn-primary" id="pricing-tier3-btn">
+              Get Started →
+            </a>
           </div>
-          <ul class="features-list">
-            <li><span class="check">✓</span> Up to 10 pages</li>
-            <li><span class="check">✓</span> Local SEO &amp; Schema Markup</li>
-            <li><span class="check">✓</span> Full Copywriting Included</li>
-            <li><span class="check">✓</span> Priority Support</li>
-            <li><span class="check">✓</span> 3 rounds of revisions</li>
-            <li><span class="check">✓</span> UK Cloud Hosting + SSL</li>
-          </ul>
-          <a href="https://wa.me/447913055346?text=Hi%20Renas%2C%20I%27m%20interested%20in%20the%20Local%20Dominator%20package!"
-            target="_blank" class="btn btn-primary" id="pricing-tier3-btn">
-            Get Started →
-          </a>
         </div>
 
       </div>
@@ -591,6 +617,11 @@
 
   <!-- BACK TO TOP -->
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- MOBILE FLOATING CONTACT FAB -->
+  <a href="#contact" class="mobile-contact-fab" id="mobile-contact-fab" aria-label="Contact Me">
+    💬 Contact Me
+  </a>
 
   <script src="script.js"></script>
 </body>

@@ -193,3 +193,47 @@ window.addEventListener('scroll', () => {
 });
 
 console.log('🚀 Renas The Website Guy — Page loaded!');
+
+// ===== PRICING ACCORDION (mobile only) =====
+function initPricingAccordion() {
+  const accordionBtns = document.querySelectorAll('.pricing-accordion-btn');
+
+  accordionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('aria-controls');
+      const body = document.getElementById(targetId);
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      // Close all others
+      accordionBtns.forEach(otherBtn => {
+        const otherId = otherBtn.getAttribute('aria-controls');
+        const otherBody = document.getElementById(otherId);
+        otherBtn.setAttribute('aria-expanded', 'false');
+        otherBody.classList.remove('open');
+      });
+
+      // Toggle this one
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        body.classList.add('open');
+      }
+    });
+  });
+}
+
+// Only run accordion on mobile
+const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+function handleMobileChange(e) {
+  if (e.matches) {
+    initPricingAccordion();
+  } else {
+    // On desktop: ensure all card bodies are visible
+    document.querySelectorAll('.pricing-card-body').forEach(body => {
+      body.classList.remove('open');
+    });
+  }
+}
+
+mediaQuery.addEventListener('change', handleMobileChange);
+handleMobileChange(mediaQuery);

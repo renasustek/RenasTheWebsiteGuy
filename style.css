@@ -220,6 +220,22 @@ body {
   text-decoration: none;
   color: var(--black);
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.nav-logo-text {
+  display: inline;
 }
 
 .logo-bracket {
@@ -1546,10 +1562,33 @@ body {
   }
 }
 
+/* ===== PRICING ACCORDION (hidden by default, shown on mobile) ===== */
+.pricing-accordion-btn {
+  display: none;
+}
+
+.pricing-card-body {
+  display: block; /* always visible on desktop */
+}
+
+/* ===== MOBILE CONTACT FAB ===== */
+.mobile-contact-fab {
+  display: none;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+  }
+
+  /* Hide logo text on mobile — show only the image */
+  .nav-logo-text {
+    display: none;
+  }
+
+  .nav-logo-img {
+    height: 36px;
   }
 
   .nav-links {
@@ -1560,7 +1599,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 20px;
     z-index: 1000;
   }
 
@@ -1568,13 +1607,33 @@ body {
     display: flex;
   }
 
+  /* Fix all nav links to have consistent button style in mobile menu */
   .nav-links a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    padding: 12px 28px;
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 var(--black);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--black);
+    display: inline-block;
+    transition: transform 0.1s, box-shadow 0.1s;
   }
 
+  .nav-links a:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--black);
+  }
+
+  /* WhatsApp btn in mobile menu matches others */
   .nav-links .btn-nav {
-    font-size: 1.1rem;
-    padding: 16px 32px;
+    font-size: 1.3rem;
+    padding: 12px 28px;
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 var(--black);
+    background: var(--yellow);
   }
 
   .benefits-grid {
@@ -1624,8 +1683,8 @@ body {
   }
 
   .back-to-top {
-    bottom: 20px;
-    right: 20px;
+    bottom: 80px; /* pushed up above the FAB */
+    right: 16px;
     width: 44px;
     height: 44px;
     font-size: 1rem;
@@ -1637,6 +1696,110 @@ body {
 
   .mission-inner {
     padding: 28px 24px;
+  }
+
+  /* === Reduced section padding on mobile === */
+  .benefits,
+  .how-it-works,
+  .pricing,
+  .contact {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .mission-section {
+    padding: 40px 0;
+  }
+
+  .software-section {
+    padding: 20px 0;
+  }
+
+  /* === Pricing accordion on mobile === */
+  .pricing-accordion-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0 12px;
+    font-family: var(--font-body);
+    text-align: left;
+  }
+
+  .accordion-tier-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+
+  .accordion-plan-name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    flex: 1;
+  }
+
+  .accordion-price {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .accordion-chevron {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .pricing-accordion-btn[aria-expanded="true"] .accordion-chevron {
+    transform: rotate(180deg);
+  }
+
+  .pricing-card-body {
+    display: none;
+    overflow: hidden;
+  }
+
+  .pricing-card-body.open {
+    display: block;
+  }
+
+  /* === Mobile floating Contact FAB === */
+  .mobile-contact-fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 16px;
+    background: var(--pink);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 12px 20px;
+    border: 2px solid var(--black);
+    border-radius: 100px;
+    box-shadow: 4px 4px 0 var(--black);
+    text-decoration: none;
+    z-index: 998;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .mobile-contact-fab:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--black);
+  }
+
+  .mobile-contact-fab:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--black);
   }
 }
 
